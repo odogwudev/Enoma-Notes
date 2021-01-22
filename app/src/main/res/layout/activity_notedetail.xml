@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteDetailActivity">
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_title"
+        android:autofillHints="@string/add_title"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D6D1D1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        android:autofillHints="@string/description"
+        android:textSize="20sp"
+        android:inputType="textMultiLine"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+    <Button
+        android:id="@+id/create_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cancel"
+        android:background="@drawable/create_note_btn"
+        android:text="@string/create_note"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/cancel"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/cancel_btn"
+        android:textSize="20sp"
+        android:textColor="#939292"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
